@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 15px;
+    box-sizing: border-box;
+    background-color: #29284d;
+   /* background-image: url("./Resources/background.webp");
+    background-repeat: no-repeat;
+    background-size: cover;  */
+
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+body,
+input,
+textarea,
+select,
+button {
+    color: white;
+    font: 400 1.5rem "Roboto", sans-serif;
+}
+
+button {
+    cursor: pointer;
+}
+
+
+.searchBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.searchBox input {
+    border-radius: 10px 0 0 10px;
+    border: 0;
+    outline: none;
+    height: 36px;
+    padding: 4px 16px;
+    background-color: white;
+    color: black;
+}
+
+.searchBox button {
+    border-radius: 0 8px 8px 0;
+    border: 0;
+    height: 36px;
+    padding: 4px 16px;
+    background-color: white;
+}
+
+.pokemonCard {
+    display: flex;
+    margin-top: 3rem;
+    margin-left: 25rem;
+    margin-right: 25rem;
+    justify-content: center;
+    border: 1px solid lightblue;
+    border-radius: 15%
+}
+
+.pokemonCard img {
+    width: 200px;
+}
+
+.pokemonCard p {
+    margin-top: 1rem;
+}
+
+.pokemonInfo {
+    padding: 2rem;
+}
+
+.pokemonEvos {
+    display: flex;
+    flex-direction: row;
+    margin-top: 3rem;
+    margin-left: 25rem;
+    margin-right: 25rem;
+    justify-content: center;
+    border: 1px solid lightblue;
+    border-radius: 15%
+}
+
+.pokemonEvos img {
+    width: 200px;
+
+}
+
+.pokedexContainer img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
