@@ -20,7 +20,7 @@ if (isset($_POST['SearchPokemon'])) {
     } else if (count($pokemon['moves']) === 1) {
         $moves = $pokemon['moves']['0']['move']['name'];
     }
-    $speciesUrl = $pokemon[`species`][`url`];
+    $speciesUrl = $pokemon['species']['url'];
     $fetchSpecies = file_get_contents($speciesUrl);
     $speciesData = json_decode($fetchSpecies, true);
     var_dump($pokemon['species']['url']);
@@ -29,9 +29,9 @@ if (isset($_POST['SearchPokemon'])) {
     $evoFetchChain = file_get_contents($evoFetchChainUrl);
     $evoChainData = json_decode($evoFetchChain, true);
 
-    $baseFormUrl = $evoChainData[`chain`][`species`][`name`];
-    $evoName = $evoChainData[`chain`][`evolves_to`][0][`species`][`name`];
-    $evoName2 = $evoChainData[`chain`][`evolves_to`][0][`evolves_to`][0][`species`][`name`];
+    $baseFormUrl = $evoChainData['chain']['species']['url'];
+    $evoName = $evoChainData['chain']['evolves_to'][0]['species']['url'];
+    $evoName2 = $evoChainData['chain']['evolves_to'][0]['evolves_to'][0]['species']['url'];
 
     $baseFormFetch = file_get_contents($baseFormUrl);
     $baseFormData = json_decode($baseFormFetch, true);
@@ -75,10 +75,18 @@ if (isset($_POST['SearchPokemon'])) {
 
     //Pokemon Card
     <div class="pokemonCard" id="pokemonInfo">
-        <?php
+        <p>Name: <?php
         if (isset($_POST['SearchPokemon'])) {
             echo $pokeName;
-        } ?>
+        } ?> </p>
+        <p>ID: <?php
+            if (isset($_POST['SearchPokemon'])) {
+                echo $pokemonID;
+            } ?> </p>
+        <p>Moves: <?php
+            if (isset($_POST['SearchPokemon'])) {
+                echo implode(" ",$moves);
+            } ?></p>
         <img src="
                 <?php
         if (isset($_POST['SearchPokemon'])) {
@@ -89,7 +97,9 @@ if (isset($_POST['SearchPokemon'])) {
 
     //Pokemon Evolutions
     <div class="pokemonEvos">
-
+        <p>Base form: </p>
+        <p>First evolution: </p>
+        <p>Second Evolution: </p>
     </div>
 </div>
 
