@@ -99,5 +99,8 @@ button {
     margin-right: auto;
 }
 
-
+form {
+    display: flex;
+    justify-content: center;
+}
 
