@@ -1,7 +1,5 @@
 # Title: The pokemon challenge - PHP style
 
-[Check out the page!](https://vladburlacu.github.io/pokemon-phpstyle/)
-
 - Repository: `challenge-pokemon-php`
 - Type of Challenge: `Learning`
 - Duration: `2 days`
